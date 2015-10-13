@@ -54,12 +54,20 @@ class ViewController: UIViewController {
         
     }
     // La función cerrar borrar todos los datos de la caché y devuelve al login
+    
+    func ordenar(){
+       
+        var ordenados: () = sort(&usuarios, <)
+        lblLista.text = ("\(usuarios)");
+    
+    }
    
     @IBAction func btnOrdenar(sender: UIButton) {
         
+        ordenar()
         
-        var ordenados: () = sort(&usuarios, <)
-        lblLista.text = ("\(usuarios)");
+        //var ordenados: () = sort(&usuarios, <)
+        //lblLista.text = ("\(usuarios)");
         
     }
     
